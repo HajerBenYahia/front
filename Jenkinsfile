@@ -35,7 +35,7 @@ agent any
                           steps {
                                sh 'docker-compose up -d'
                                  }  }
-          /* stage('Clean')
+          stage('Clean')
            {
             
             steps {
@@ -46,7 +46,7 @@ agent any
             }
          
          
-         } */
+         } 
          
          
          }
@@ -65,4 +65,4 @@ post {
                          body: "Failure on job ${env.JOB_NAME}, Build Number: ${env.BUILD_NUMBER}, Build URL: ${env.BUILD_URL} "
                     }
 }
-      }
+      
