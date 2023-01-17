@@ -39,7 +39,7 @@ agent any
            {
             steps {
             sh
-                sh 'docker image rmi ranimelhaj/imagedocker'
+                sh 'docker image rmi hajerbenyahia/angularproject'
            
                      
             }
