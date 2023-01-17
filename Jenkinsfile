@@ -35,7 +35,7 @@ agent any
                           steps {
                                sh 'docker-compose up -d'
                                  }  }
-          stage('Clean')
+          /* stage('Clean')
            {
             
             steps {
@@ -46,7 +46,7 @@ agent any
             }
          
          
-         }
+         } */
          
          
          }
