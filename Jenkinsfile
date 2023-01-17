@@ -35,19 +35,30 @@ agent any
                           steps {
                                sh 'docker-compose up -d'
                                  }  }
+          stage('Clean')
+           {
+            steps {
+            sh
+                sh 'docker image rmi ranimelhaj/imagedocker'
+           
+                     
+            }
+         
+         
+         }
 
 
         }
-/*post {
+post {
                                                 success {
-                                                     mail to: "jbara.aymen@esprit.tn",
-                                                     subject: "Badis Khalsi Pipeline Success",
+                                                     mail to: "hajer.benyahia@polytechnicien.tn",
+                                                     subject: "Hajer BEN YAHIA's Pipeline Success",
                                                      body: "success on job ${env.JOB_NAME}, Build Number: ${env.BUILD_NUMBER}, Build URL: ${env.BUILD_URL}"
                                                 }
                     failure {
-                        mail to: "jbara.aymen@esprit.tn",
-                         subject: "Pipeline Failure",
+                        mail to: "hajer.benyahia@polytechnicien.tn",
+                         subject: "Hajer BEN YAHIA's Pipeline Failure!",
                          body: "Failure on job ${env.JOB_NAME}, Build Number: ${env.BUILD_NUMBER}, Build URL: ${env.BUILD_URL} "
                     }
-}*/
+}
       }
