@@ -9,7 +9,7 @@ agent any
 			    stage('Build docker image'){
                              steps{
                                  script{
-                                    sh 'docker build -t ranimelhaj/angularproject .'
+                                    sh 'docker build -t hajerbenyahia/angularproject .'
                                  }
                              }
                          }
@@ -21,13 +21,13 @@ agent any
 
                                          steps {
                                           sh 'echo "login Docker ...."'
-                   	sh 'docker login -u ranimelhaj -p ranim123*'
+                   	sh 'docker login -u hajerbenyahia -p hajer1234'
                                }  }
 		 stage('Docker push') {
 
                  steps {
                       sh 'echo "Docker is pushing ...."'
-                     	sh 'docker push ranimelhaj/angularproject'
+                     	sh 'docker push hajerbenyahia/angularproject'
                         }  }
 
                         stage('Docker compose') {
