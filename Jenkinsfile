@@ -35,7 +35,7 @@ agent any
                           steps {
                                sh 'docker-compose up -d'
                                  }  }
-          stage('Clean')
+         /*  stage('Clean')
            {
             
             steps {
@@ -46,13 +46,13 @@ agent any
             }
          
          
-         } 
+         }  */
          
          
          }
 
 
-        }
+        
 post {
                                                 success {
                                                      mail to: "hajer.benyahia@polytechnicien.tn",
@@ -66,3 +66,4 @@ post {
                     }
 }
       
+}
