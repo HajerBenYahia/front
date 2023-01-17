@@ -38,7 +38,6 @@ agent any
           stage('Clean')
            {
             steps {
-            sh
                 sh 'docker image rmi hajerbenyahia/angularproject'
            
                      
